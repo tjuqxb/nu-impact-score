@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <META http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/leaflet.css"/>
+	<link rel="stylesheet" href="css/carte.css"/>
+	<script src="js/example.min.js"></script>
+	<script src="js/tools.min.js"></script>
+  <style>
+    #container {
+      position: relative;
+    }
+    #wrapper_pixi {
+      position: absolute;
+    }
+    #wrapper_table {
+      position: absolute;
+      right: 0px;
+      top:0px;
+      width: 30%;
+    }
+    @media screen and (max-width: 600px) {
+      #wrapper_table {
+      position: absolute;
+      right:  0px;
+      top: 0px;
+      width: 100%;
+     }
+   }
+  </style>
+  <link
+  href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+  rel="stylesheet"
+/>
+</head>
+<body>
+  <div id="container">
+  <div id="wrapper_pixi"></div>
+  <div id="wrapper_table">
+    <div id = "filter">
+    <span style="color:white">Filter:</span>
+    <select name = "fliter-options" id = "filter-options">
+      <option value="none">none</option>
+    </select>
+    <input type="text" id="filter-val">
+    <button type="button" onclick="filter()"> submit </button>
+    </div>
+    <div id = "inner_table"></div>
+  </div>
+  </div>
+  </div>
+  <script src="./node_modules/pixi.js/dist/browser/pixi.min.js"></script>
+  <script src="./node_modules/@pixi/graphics-extras/dist/browser/graphics-extras.min.js"></script>
+  <script src="./appPixi.js"></script>
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script src="./appData.js"></script>
+</body>
+</html>
