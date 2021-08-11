@@ -4,57 +4,103 @@
   <meta charset="utf-8">
   <META http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/leaflet.css"/>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 	<link rel="stylesheet" href="css/carte.css"/>
-	<script src="js/example.min.js"></script>
-	<script src="js/tools.min.js"></script>
   <style>
-    #container {
-      position: relative;
+    table, th, td {
+  border: 1px solid black;
+}
+    table {
+  border-collapse: collapse;
+}
+    .pixi-popup {padding-bottom: 34px;}
+    option {
+      font-size: 14px;
     }
-    #wrapper_pixi {
+    select {
+      font-size: 14px;
+    }
+    #map {
       position: absolute;
     }
+   
     #wrapper_table {
-      position: absolute;
+      position: fixed;
       right: 0px;
       top:0px;
-      width: 30%;
+      width: 40%;
+      z-index:99999;
     }
-    @media screen and (max-width: 600px) {
+    #toggle_button {
+      background-color: #e7e7e7; 
+      color: black;
+      border: none;
+      padding: 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+     }
+     @media all and (orientation : portrait){
       #wrapper_table {
-      position: absolute;
+      position: fixed;
       right:  0px;
       top: 0px;
       width: 100%;
+      z-index:99999;
      }
-   }
+     @media all and (max-width: 768px)
+     {
+      #wrapper_table {
+      position: fixed;
+      right:  0px;
+      top: 0px;
+      width: 100%;
+      z-index:99999;
+    }
+  }
   </style>
   <link
   href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
   rel="stylesheet"
 />
+<script src='./node_modules/bezier-easing/index.js'></script>
+<script src="./node_modules/leaflet/dist/leaflet.js"></script>
+<script src="./node_modules/pixi.js/dist/browser/pixi.min.js"></script>
+<script src="./node_modules/@pixi/graphics-extras/dist/browser/graphics-extras.min.js"></script>
+<script src="./node_modules/leaflet-pixi-overlay/L.PixiOverlay.min.js"></script>
+<script src="js/MarkerContainer.js"></script>
 </head>
-<body>
-  <div id="container">
-  <div id="wrapper_pixi"></div>
+<body style="height: 100%; margin: 0; overflow: hidden;">
+  
+  <div id="map" style="height: 100%; width: 100%;"></div>
   <div id="wrapper_table">
+    <button type="button" id="toggle_button" onclick="tableToggle()">hide table</button>
+    <div id="table-content">
     <div id = "filter">
-    <span style="color:white">Filter:</span>
+      <div>
+        <span style="color:black; background-color:beige">Country:</span>
+        <select name = "country-options" id = "country-options">
+          <option value="none">none</option>
+        </select>
+      </div>
+      <div>
+    <span style="color:black; background-color:beige">Filter:</span>
     <select name = "fliter-options" id = "filter-options">
       <option value="none">none</option>
     </select>
-    <input type="text" id="filter-val">
-    <button type="button" onclick="filter()"> submit </button>
+    <input type="text" id="filter-val" style="font-size: 14px;">
+    <button type="button" onclick="filter()" style="font-size: 20x; padding: 2px 2px;"> submit </button>
+      </div>
     </div>
     <div id = "inner_table"></div>
+    </div>
   </div>
   </div>
-  </div>
-  <script src="./node_modules/pixi.js/dist/browser/pixi.min.js"></script>
-  <script src="./node_modules/@pixi/graphics-extras/dist/browser/graphics-extras.min.js"></script>
-  <script src="./appPixi.js"></script>
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  
   <script src="./appData.js"></script>
+  <script src="./appMap.js"></script>
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 </body>
 </html>

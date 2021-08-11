@@ -3,6 +3,21 @@ let orig_data = [];
 let data = [];
 let filterData = [];
 let gridObj;
+let table = document.getElementById('table-content');
+let hideButton = document.getElementById('toggle_button');
+let displayTable = true;
+
+let tableToggle = function () {
+  if (displayTable) {
+    hideButton.innerHTML = 'display table';
+    table.style.display = 'none';
+    displayTable = false;
+  } else {
+    hideButton.innerHTML = 'hide table';
+    table.style.display = 'block';
+    displayTable = true;
+  }
+};
 
 let getJSON = function (url, successHandler, errorHandler) {
   var xhr =
@@ -26,33 +41,6 @@ let getJSON = function (url, successHandler, errorHandler) {
   xhr.send();
 };
 
-getJSON('./data/output.json', function (markers) {
-  colNames = Object.keys(markers[0]);
-  orig_data = markers;
-  data = getContent(markers);
-  filterData = data;
-  colNames.forEach((elem) => {
-    let option = document.createElement('option');
-    option.value = elem;
-    option.text = elem;
-    document.getElementById('filter-options').appendChild(option);
-  });
-  gridObj = new gridjs.Grid({
-    columns: colNames,
-    data: filterData,
-    pagination: {
-      enabled: true,
-      limit: 5,
-      summary: false,
-    },
-    sort: true,
-    search: {
-      enabled: true,
-    },
-  });
-  gridObj.render(document.getElementById('inner_table'));
-});
-
 // tranform objects array to array array
 let getContent = function (items) {
   let ret = [];
@@ -68,20 +56,32 @@ let getContent = function (items) {
 
 let filter = function () {
   new Promise((resolve, reject) => {
-    console.log('filter');
+    let country = document.getElementById('country-options').value;
     let colName = document.getElementById('filter-options').value;
     let value = document.getElementById('filter-val').value;
     let ret = [];
-    if (colName !== 'none') {
-      orig_data.forEach((record) => {
-        if (record[colName].toString() === value) {
-          ret.push(record);
-        }
+    if (colName !== 'none' || country != 'none') {
+      pMarkers.forEach((maker) => {
+        maker.visible = false;
       });
-      let nData = getContent(ret);
-      console.log(nData[1]);
-      resolve(nData);
+      for (let i = 0; i < data.length; i++) {
+        if (
+          (country === 'none' ||
+            data[i][colNames.indexOf('country')] === country) &&
+          (colName === 'none' ||
+            data[i][colNames.indexOf(colName)].toString() === value)
+        ) {
+          ret.push(data[i]);
+          pMarkers[i].visible = true;
+        }
+      }
+      renderer.render(container);
+      resolve(ret);
     } else {
+      pMarkers.forEach((maker) => {
+        maker.visible = true;
+      });
+      renderer.render(container);
       resolve(data);
     }
   }).then((data) => {

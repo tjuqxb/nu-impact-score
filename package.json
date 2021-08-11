@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "@pixi/graphics-extras": "^6.1.1",
+    "bezier-easing": "^0.4.3",
     "fs-extra": "^10.0.0",
     "gridjs": "^5.0.2",
+    "leaflet": "^1.7.1",
     "leaflet-pixi-overlay": "^1.8.2",
     "pixi.js": "^6.1.0"
   }
