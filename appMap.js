@@ -1,3 +1,10 @@
+/*
+  This pixi and map part is coded based on the quick-start example
+  at https://github.com/manubb/Leaflet.PixiOverlay  
+  The code here handles multiple records and enable displaying table
+  for each point in the pop-up window. 
+*/
+
 var loader = new PIXI.Loader();
 let container;
 let renderer;
@@ -5,10 +12,11 @@ let pixiContainer;
 let filterProcess;
 let pMarkers = [];
 let markerTexture;
+
 loader.add('marker', './images/marker-icon.png');
 document.addEventListener('DOMContentLoaded', function () {
   getJSON('./data/output.json', function (markers) {
-    // table part
+    //generate components of the table part
     //get country names
     countries = new Set();
     markers.forEach((record) => {
@@ -72,12 +80,12 @@ document.addEventListener('DOMContentLoaded', function () {
           var frame = null;
           var firstDraw = true;
           var prevZoom;
-          //var markerLatLng = [51.5, -0.09];
+
           pixiContainer = new PIXI.Container();
           pixiContainer.interactive = true;
           pixiContainer.buttonMode = true;
 
-          //console.log(filterData);
+          // generate the table for each record
           data.forEach((record) => {
             var marker = new PIXI.Sprite(markerTexture);
             marker.latLng = [
@@ -94,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
               c1.innerHTML = record[i];
             }
 
+            // pop up
             marker.popup = L.popup({
               className: 'pixi-popup',
               maxWidth: 'auto',
