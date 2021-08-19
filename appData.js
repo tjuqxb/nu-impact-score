@@ -7,6 +7,9 @@ let table = document.getElementById('table-content');
 let hideButton = document.getElementById('toggle_button');
 let displayTable = true;
 
+/*
+  control the display of the table
+*/
 let tableToggle = function () {
   if (displayTable) {
     hideButton.innerHTML = 'display table';
@@ -19,6 +22,9 @@ let tableToggle = function () {
   }
 };
 
+/*
+  Load the JSON file
+*/
 let getJSON = function (url, successHandler, errorHandler) {
   var xhr =
     typeof XMLHttpRequest != 'undefined'
@@ -41,7 +47,9 @@ let getJSON = function (url, successHandler, errorHandler) {
   xhr.send();
 };
 
-// tranform objects array to array array
+/*
+  tranform an object array to a 2d array for display
+*/
 let getContent = function (items) {
   let ret = [];
   items.forEach((element) => {
@@ -54,6 +62,9 @@ let getContent = function (items) {
   return ret;
 };
 
+/*
+  filter data function
+*/
 let filter = function () {
   new Promise((resolve, reject) => {
     let country = document.getElementById('country-options').value;
@@ -90,6 +101,9 @@ let filter = function () {
   });
 };
 
+/*
+  reload the table using filtered data as input
+*/
 let refresh = function () {
   gridObj
     .updateConfig({
