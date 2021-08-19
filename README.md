@@ -1,9 +1,23 @@
-# nu-impact-score
+# 📊 Impact Score | Northeastern University CS5965 & SIRIUS Global 
 
 The code for NU course CS5965(project Impact Network Digital Platform
 Creation), including data visualization on map and Strapi login page.
 
-## Setup
+This code summarizes the visualization designs of Smriti Bajaj, Emily Colladay,
+and Xiaobo Qian for SIRIUS Global, a Rome-based NGO with the mission to foster a
+network of innovators across the world. The visualizations created intend to
+give its audience an engaging look into the organization's imapct score system,
+depicted as a choropleth map.
+
+## 🗺 Data Visualization Design
+
+For our design process, we offer two different implementations of such a map,
+one uisng the Google Charts API, and the other PixiJS. This offers different
+versions with the same core functionality of displaying SIRIUS' code in a
+geographical manner. To manage the data, we have also included Strapi as our
+CMS, with which we created a login page.
+
+## 🛠 Setup
 
 1.  "npm install --global http-server" Nodejs and Node package manager must be installed beforehand
 
