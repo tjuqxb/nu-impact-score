@@ -1,7 +1,4 @@
-# 📊 Impact Score | Northeastern University CS5965 & SIRIUS Global 
-
-The code for NU course CS5965(project Impact Network Digital Platform
-Creation), including data visualization on map and Strapi login page.
+# 📊 Impact Score Visualization (CS5965 & SIRIUS)
 
 This code summarizes the visualization designs of Smriti Bajaj, Emily Colladay,
 and Xiaobo Qian for SIRIUS Global, a Rome-based NGO with the mission to foster a
