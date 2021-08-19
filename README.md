@@ -14,6 +14,11 @@ versions with the same core functionality of displaying SIRIUS' code in a
 geographical manner. To manage the data, we have also included Strapi as our
 CMS, with which we created a login page.
 
+The data input is currently set to a JSON file of mock data, which can be
+replaced once SIRIUS has finalized its calculations of the impact score. These
+estimations include an innovator name, id, and their location, as well as their number of projects and their score.
+
+
 ## 🛠 Setup
 
 The following are necessary to run the code in a local browser:
