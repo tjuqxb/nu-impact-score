@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const nary = countryList.sort((a, b) => {
       return a.localeCompare(b);
     });
-    //console.log(nary);
     colNames = Object.keys(markers[0]);
     orig_data = markers;
     data = getContent(markers);

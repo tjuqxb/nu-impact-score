@@ -5,8 +5,8 @@
         "longitude": 4.91667,
         "latitude": 46.3833,
         "avancement": 23,
-        "category": "r",
-        "country": "Pitcairn"
+        "category": "g",
+        "country": "Réunion"
     },
     {
         "label": "Remies",
@@ -14,8 +14,8 @@
         "longitude": 3.53333,
         "latitude": 49.6833,
         "avancement": 44,
-        "category": "b",
-        "country": "Hungary"
+        "category": "g",
+        "country": "Trinidad and Tobago"
     },
     {
         "label": "Cernion",
@@ -23,8 +23,8 @@
         "longitude": 4.425,
         "latitude": 49.8,
         "avancement": 45,
-        "category": "r",
-        "country": "Iran (Islamic Republic of)"
+        "category": "b",
+        "country": "Liberia"
     },
     {
         "label": "Villebazy",
@@ -32,8 +32,8 @@
         "longitude": 2.33333,
         "latitude": 43.0667,
         "avancement": 57,
-        "category": "g",
-        "country": "Portugal"
+        "category": "r",
+        "country": "United States of America (the)"
     },
     {
         "label": "Maizet",
@@ -42,7 +42,7 @@
         "latitude": 49.0833,
         "avancement": 39,
         "category": "g",
-        "country": "Botswana"
+        "country": "Congo (the Democratic Republic of the)"
     },
     {
         "label": "Meux",
@@ -50,8 +50,8 @@
         "longitude": -0.35,
         "latitude": 45.45,
         "avancement": 10,
-        "category": "b",
-        "country": "Saint Vincent and the Grenadines"
+        "category": "r",
+        "country": "Singapore"
     },
     {
         "label": "Fontenelle",
@@ -59,8 +59,8 @@
         "longitude": 5.37473,
         "latitude": 47.5017,
         "avancement": 8,
-        "category": "r",
-        "country": "Libya"
+        "category": "g",
+        "country": "Ethiopia"
     },
     {
         "label": "Saint-Front-de-Pradoux",
@@ -68,8 +68,8 @@
         "longitude": 0.35,
         "latitude": 45.05,
         "avancement": 19,
-        "category": "r",
-        "country": "Czechia"
+        "category": "g",
+        "country": "Poland"
     },
     {
         "label": "Truinas",
@@ -77,8 +77,8 @@
         "longitude": 5.08333,
         "latitude": 44.5667,
         "avancement": 63,
-        "category": "g",
-        "country": "South Georgia and the South Sandwich Islands"
+        "category": "b",
+        "country": "Guyana"
     },
     {
         "label": "Pleyber-Christ",
@@ -87,7 +87,7 @@
         "latitude": 48.5,
         "avancement": 65,
         "category": "g",
-        "country": "Bonaire, Sint Eustatius and Saba"
+        "country": "Holy See (the)"
     },
     {
         "label": "Saint-Lary",
@@ -95,8 +95,8 @@
         "longitude": 0.5,
         "latitude": 43.7167,
         "avancement": 47,
-        "category": "g",
-        "country": "Barbados"
+        "category": "r",
+        "country": "Tonga"
     },
     {
         "label": "Sixt-sur-Aff",
@@ -105,7 +105,7 @@
         "latitude": 47.7833,
         "avancement": 11,
         "category": "r",
-        "country": "Nepal"
+        "country": "Hong Kong"
     },
     {
         "label": "Cheyssieu",
@@ -113,8 +113,8 @@
         "longitude": 4.85,
         "latitude": 45.4333,
         "avancement": 34,
-        "category": "r",
-        "country": "Nicaragua"
+        "category": "b",
+        "country": "Liberia"
     },
     {
         "label": "Le Gault-Perche",
@@ -122,8 +122,8 @@
         "longitude": 0.979444,
         "latitude": 48.095,
         "avancement": 53,
-        "category": "r",
-        "country": "Cabo Verde"
+        "category": "g",
+        "country": "Maldives"
     },
     {
         "label": "Mignères",
@@ -132,7 +132,7 @@
         "latitude": 48.05,
         "avancement": 82,
         "category": "r",
-        "country": "Romania"
+        "country": "Belarus"
     },
     {
         "label": "Maulévrier",
@@ -140,8 +140,8 @@
         "longitude": -0.75,
         "latitude": 47.0167,
         "avancement": 66,
-        "category": "b",
-        "country": "Madagascar"
+        "category": "r",
+        "country": "Greece"
     },
     {
         "label": "Saint-Léonard",
@@ -150,7 +150,7 @@
         "latitude": 49.2167,
         "avancement": 11,
         "category": "r",
-        "country": "Zimbabwe"
+        "country": "Saint Kitts and Nevis"
     },
     {
         "label": "Lagney",
@@ -158,8 +158,8 @@
         "longitude": 5.83333,
         "latitude": 48.7333,
         "avancement": 60,
-        "category": "r",
-        "country": "Eswatini"
+        "category": "g",
+        "country": "Kenya"
     },
     {
         "label": "Bliesbruck",
@@ -167,8 +167,8 @@
         "longitude": 7.18333,
         "latitude": 49.1167,
         "avancement": 1,
-        "category": "r",
-        "country": "Western Sahara"
+        "category": "b",
+        "country": "Nauru"
     },
     {
         "label": "Cattenières",
@@ -176,8 +176,8 @@
         "longitude": 3.33333,
         "latitude": 50.1333,
         "avancement": 44,
-        "category": "g",
-        "country": "Cook Islands (the)"
+        "category": "r",
+        "country": "Cocos (Keeling) Islands (the)"
     },
     {
         "label": "Champosoult",
@@ -186,7 +186,7 @@
         "latitude": 48.8667,
         "avancement": 59,
         "category": "r",
-        "country": "Puerto Rico"
+        "country": "Denmark"
     },
     {
         "label": "Viscomtat",
@@ -194,8 +194,8 @@
         "longitude": 3.67611,
         "latitude": 45.8284,
         "avancement": 6,
-        "category": "r",
-        "country": "Thailand"
+        "category": "b",
+        "country": "Curaçao"
     },
     {
         "label": "Asté",
@@ -204,7 +204,7 @@
         "latitude": 43.0333,
         "avancement": 75,
         "category": "b",
-        "country": "Argentina"
+        "country": "Romania"
     },
     {
         "label": "Chaponost",
@@ -212,8 +212,8 @@
         "longitude": 4.75,
         "latitude": 45.7,
         "avancement": 66,
-        "category": "b",
-        "country": "Finland"
+        "category": "r",
+        "country": "Armenia"
     },
     {
         "label": "Saint-Symphorien-de-Marmagne",
@@ -221,8 +221,8 @@
         "longitude": 4.33333,
         "latitude": 46.8333,
         "avancement": 89,
-        "category": "g",
-        "country": "Madagascar"
+        "category": "b",
+        "country": "Central African Republic (the)"
     },
     {
         "label": "Grugny",
@@ -230,8 +230,8 @@
         "longitude": 1.11667,
         "latitude": 49.6167,
         "avancement": 96,
-        "category": "r",
-        "country": "Fiji"
+        "category": "b",
+        "country": "Chad"
     },
     {
         "label": "Millemont",
@@ -240,7 +240,7 @@
         "latitude": 48.8,
         "avancement": 83,
         "category": "r",
-        "country": "Bhutan"
+        "country": "Virgin Islands (U.S.)"
     },
     {
         "label": "Chapelle",
@@ -249,7 +249,7 @@
         "latitude": 49.7653,
         "avancement": 46,
         "category": "r",
-        "country": "Philippines (the)"
+        "country": "Romania"
     },
     {
         "label": "Nouaillé-Maupertuis",
@@ -257,8 +257,8 @@
         "longitude": 0.416667,
         "latitude": 46.5167,
         "avancement": 95,
-        "category": "g",
-        "country": "Vanuatu"
+        "category": "r",
+        "country": "Sri Lanka"
     },
     {
         "label": "Sermizelles",
@@ -266,8 +266,8 @@
         "longitude": 3.8,
         "latitude": 47.5333,
         "avancement": 65,
-        "category": "r",
-        "country": "Eswatini"
+        "category": "b",
+        "country": "Albania"
     },
     {
         "label": "Mamoudzou",
@@ -275,7 +275,7 @@
         "longitude": 45.2317,
         "latitude": -12.7814,
         "avancement": 18,
-        "category": "r",
-        "country": "Romania"
+        "category": "b",
+        "country": "Bangladesh"
     }
 ]

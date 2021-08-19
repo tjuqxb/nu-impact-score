@@ -259,8 +259,9 @@ var ProcessData = /** @class */ (function () {
       var origStr = fs.readFileSync(inputPath, { encoding: 'UTF-8' });
       var data = JSON.parse(origStr);
       if (typeof data !== 'object') return false;
-      this.processData(data);
+      this.processDataEx(data);
       let pick = [];
+      // Only leave 30 records of the data(which can be altered)
       let k = Math.floor(data.length / 30);
       for (let i = 0; i < data.length; i++) {
         if (i % k === 0) {
@@ -275,7 +276,14 @@ var ProcessData = /** @class */ (function () {
     }
     return true;
   };
-  ProcessData.prototype.processData = function (data) {
+
+  /*
+  1 add a sample 'category' column to the input data
+  2 add a 'country' column to the input data
+  3 please find geocoding API to transform contry/city to Latitude and Longitude (if those
+    are not contained in original data) and modify the code for that usage 
+  */
+  ProcessData.prototype.processDataEx = function (data) {
     var items = ['r', 'g', 'b'];
     data.forEach(function (record) {
       record['category'] = items[Math.floor(Math.random() * 3)];

@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple Map</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+  <div class="card-block" id="geometry"></div> -->
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChzAhsLVwPh0Sxb00Jmk19Dy70fAvMNl0&callback=initMap&libraries=&v=weekly"
+    async>
+    </script>
+  <script>
+    axios.get('http://open.mapquestapi.com/geocoding/v1/address', {
+      params: {
+        location: 'Boston',
+        key: 'gOIwRqhqhRqVeOcDPH0GUd3mlZDsya97'
+      }
+    })
+      .then(function (response) {
+        // Log full response
+        console.log(response.data);
+
+        // Geometry
+        var lat = response.data.results[0].locations[0].displayLatLng.lat;
+        var lng = response.data.results[0].locations[0].displayLatLng.lng;
+        var geometryOutput = `
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
+          <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
+        </ul>
+      `;
+
+        document.getElementById('geometry').innerHTML = geometryOutput;
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  </script>
+</body>
+
+</html> -->
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src ="index.js"></script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
